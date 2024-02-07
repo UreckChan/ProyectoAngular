@@ -1,0 +1,23 @@
+<h3>Listado de calificacion</h3>
+
+<div *ngIf="!calificaciones.length" > No hay calificaciones registradas</div>
+
+<table *ngIf="calificaciones.length" class="table">
+<thead>
+    <tr>
+        <th>ID Calificacion</th>
+        <th>Alumno</th>
+        <th>Calificacion</th>
+        <th>Materia</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let calificacion of calificaciones">
+        <td>{{ calificacion.id }}</td>
+        <td>{{ calificacion.alumno }}</td>
+        <td>{{ calificacion.calificacion }}</td>
+        <td>{{ calificacion.materia }}</td>
+    </tr>
+</tbody>
+
+</table>

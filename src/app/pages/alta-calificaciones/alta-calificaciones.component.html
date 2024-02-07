@@ -1,0 +1,23 @@
+<h3>Alta Calificacion</h3>
+
+<div class="col-sm-4">
+    <p>
+        <label>Alumno:</label>
+        <input type="text" class="form-control" [(ngModel)]="calificaciones.alumno">
+    </p>
+    <p>
+        <label>Calificacion:</label>
+        <input type="text" class="form-control" [(ngModel)]="calificaciones.calificacion">
+    </p>
+    <p>
+        <label>Selecciona la materia:</label>
+        <select [(ngModel)]="calificaciones.materia" class="form-control">
+            <option *ngFor="let materia of materias" value="{{materia.nombre}}">
+                {{materia.nombre}}
+            </option>
+        </select>
+    </p>
+    <p>
+        <button type="button" class="btn btn-primary" (click)="this.insertarCalificacion()">Insertar</button>
+    </p>
+</div>
